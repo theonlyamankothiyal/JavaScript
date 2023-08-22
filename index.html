@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+
+    <style>
+        .a {
+
+            margin-top: 15%;
+            margin-left: 40%;
+            margin-right: 40%;
+            background-color: rgba(233, 192, 11, 0.699);
+
+        }
+    </style>
+
+    <script>
+        function validation() {
+
+            let password = document.getElementById("p").value;
+
+            let validRegex1 = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            let pass = validRegex1.test(password);
+
+            if (pass) {
+
+                alert("valid password")
+            }
+
+            else {
+                alert("Password not valid ");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="a">
+        <h2>Welcome to Nihilent</h2>
+        <form>
+            <p>
+                <label>Email: <input type="email" required /> </label>
+            </p>
+            <p>
+                <label>Password : <input type="password" id="p" required /> </label>
+            </p>
+            <p>
+                <button type="submit" onclick="validation()">submit</button>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
